@@ -4,14 +4,14 @@
 
 ## Git repository structure
 
-├── ansible -- Ansible scripts
-├── cluster -- Cluster data
-│   ├── apps -- Generic applications deployed, can be pruned if not tracked by Git anymore
-│   ├── base -- Entry point for Flux v2 and globally available configurations
-│   ├── core -- Core applications deployed, cannot be pruned if not tracked by Git anymore, depends on the crds folder
-│   └── crds -- Contains CustomResourceDefinitions needed globally by the cluster
-├── docs -- Containers documentations 
-├── scripts -- Contains needed scripts
+├── ansible -- Ansible scripts  
+├── cluster -- Cluster data  
+│   ├── apps -- Generic applications deployed, can be pruned if not tracked by Git anymore  
+│   ├── base -- Entry point for Flux v2 and globally available configurations  
+│   ├── core -- Core applications deployed, cannot be pruned if not tracked by Git anymore, depends on the crds folder  
+│   └── crds -- Contains CustomResourceDefinitions needed globally by the cluster  
+├── docs -- Containers documentations  
+├── scripts -- Contains needed scripts  
 └── terraform -- Contains terraform deployment scripts
 
 ## Nodes
