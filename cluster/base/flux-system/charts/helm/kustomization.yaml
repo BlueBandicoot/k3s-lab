@@ -4,3 +4,5 @@ resources:
   - "rook-ceph-charts.yaml"
   - "bitnami-charts.yaml"
   - "metallb-charts.yaml"
+  - "traefik-charts.yaml"
+  - "jetstack-charts.yaml"
