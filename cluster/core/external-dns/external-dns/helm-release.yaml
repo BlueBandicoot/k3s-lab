@@ -20,8 +20,8 @@ spec:
     logLevel: debug
     provider: pdns
     env:
-      PDNS_API_KEY: ${SECRET_PDNS_API_KEY}
-      PDNS_API_URL: ${SECRET_PDNS_API_URL}
+      - PDNS_API_KEY: "${SECRET_PDNS_API_KEY}"
+      - PDNS_API_URL: "${SECRET_PDNS_API_URL}"
     extraArgs:
       - --pdns-server=$(PDNS_API_URL)
       - --pdns-api-key=$(PDNS_API_KEY)
