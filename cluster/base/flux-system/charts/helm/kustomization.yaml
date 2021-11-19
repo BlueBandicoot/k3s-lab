@@ -3,3 +3,4 @@ kind: Kustomization
 resources: 
   - "rook-ceph-charts.yaml"
   - "bitnami-charts.yaml"
+  - "metallb-charts.yaml"
