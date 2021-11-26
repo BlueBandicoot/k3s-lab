@@ -7,3 +7,4 @@ resources:
   - "traefik-charts.yaml"
   - "jetstack-charts.yaml"
   - "external-dns-charts.yaml"
+  - "nginx-charts.yaml"
