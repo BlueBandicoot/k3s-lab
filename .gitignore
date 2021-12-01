@@ -1,0 +1,4 @@
+cluster/core/rook-ceph-back/
+cluster/core/traefik-back/
+cluster/crds/rook-ceph-back/
+cluster/crds/traefik-back/
