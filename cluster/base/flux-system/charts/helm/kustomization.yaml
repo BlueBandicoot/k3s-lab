@@ -8,3 +8,4 @@ resources:
   - "jetstack-charts.yaml"
   - "external-dns-charts.yaml"
   - "nginx-charts.yaml"
+  - "longhorn-charts.yaml"
