@@ -21,6 +21,7 @@ spec:
     defaultSettings:
       defaultReplicaCount: 2
       defaultLonghornStaticStorageClass: longhorn
+      defaultDataPath: /srv/longhorn
     ingress:
       enabled: true
       annotations:
