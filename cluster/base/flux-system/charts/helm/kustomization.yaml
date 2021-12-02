@@ -7,3 +7,5 @@ resources:
   - "external-dns-charts.yaml"
   - "nginx-charts.yaml"
   - "longhorn-charts.yaml"
+  - "grafana-charts.yaml"
+  - "prometheus-community-charts.yaml"
