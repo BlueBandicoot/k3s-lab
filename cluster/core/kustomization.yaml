@@ -3,6 +3,6 @@ kind: Kustomization
 resources: 
   - "metallb"
   - "cert-manager"
-  #  - "external-dns"
+  - "external-dns"
   - "nginx"
   #  - "longhorn"
