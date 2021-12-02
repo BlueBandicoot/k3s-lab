@@ -4,5 +4,5 @@ resources:
   - "metallb"
   #  - "cert-manager"
   #  - "external-dns"
-  #  - "nginx"
+  - "nginx"
   #  - "longhorn"
