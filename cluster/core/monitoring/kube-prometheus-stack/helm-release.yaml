@@ -8,7 +8,6 @@ spec:
   interval: 5m
   chart:
     spec:
-      # renovate: registryUrl=https://prometheus-community.github.io/helm-charts
       chart: kube-prometheus-stack
       version: 21.0.1
       sourceRef:
@@ -126,7 +125,6 @@ spec:
         enabled: true
         port: 2381
         targetPort: 2381
-    # Setting this option to 0 disabled CPU limits
     prometheusOperator:
       configReloaderCpu: 0
     prometheus:
@@ -139,10 +137,6 @@ spec:
         tls:
           - hosts:
               - "prometheus.${SECRET_DOMAIN}"
-      thanosService:
-        enabled: true
-      thanosServiceMonitor:
-        enabled: true
       prometheusSpec:
         replicas: 1
         replicaExternalLabelName: "replica"
@@ -160,12 +154,6 @@ spec:
               resources:
                 requests:
                   storage: 10Gi
-        thanos:
-          image: quay.io/thanos/thanos:v0.23.1
-          version: v0.22.0
-          objectStorageConfig:
-            name: thanos-objstore
-            key: objstore.yml
         additionalScrapeConfigs:
           - job_name: 'minio-job'
             honor_timestamps: true
