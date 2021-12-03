@@ -19,8 +19,27 @@ spec:
     fullnameOverride: prometheus
     alertmanager:
       config:
+        global:
+          slack_api_url: ${SECRET_ALERT_MANAGER_SLACK_URL}
         receivers:
-          - name: "null"
+          - name: "slack"
+            slack_configs:
+              - channel: "#grafana"
+                icon_url: https://avatars3.githubcontent.com/u/3380462
+                username: "Grafana"
+                send_resolved: true
+                title: |-
+                  [{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ if ne .CommonAnnotations.summary ""}}{{ .CommonAnnotations.summary }}{{ else }}{{ .CommonLabels.alertname }}{{ end }}
+                text: >-
+                  {{ range .Alerts -}}
+                    **Alert:** {{ .Annotations.title }}{{ if .Labels.severity }} - `{{ .Labels.severity }}`{{ end }}
+
+                  **Description:** {{ if ne .Annotations.description ""}}{{ .Annotations.description }}{{else}}N/A{{ end }}
+
+                  **Details:**
+                    {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
+                    {{ end }}
+                  {{ end }}
         route:
           group_by: ["alertname", "job"]
           group_wait: 30s
