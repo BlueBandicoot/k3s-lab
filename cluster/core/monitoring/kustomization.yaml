@@ -6,5 +6,4 @@ resources:
   - kube-prometheus-stack
   - loki
   - promtail
-    #  - thanos
   - "namespace.yaml"
