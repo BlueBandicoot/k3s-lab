@@ -183,6 +183,15 @@ spec:
                 requests:
                   storage: 10Gi
         additionalScrapeConfigs:
+          - job_name: 'vault'
+            metrics_path: /v1/sys/metrics
+            params:
+              format: ['prometheus']
+            scheme: http
+            authorization:
+              credentials: ${SECRET_VAULT_PROMETHEUS_TOKEN}
+            static_configs:
+            - targets: ['10.1.0.150:8200']
           - job_name: 'minio-job'
             honor_timestamps: true
             metrics_path: /minio/v2/metrics/cluster
