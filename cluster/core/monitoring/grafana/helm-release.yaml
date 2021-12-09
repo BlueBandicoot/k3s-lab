@@ -41,7 +41,7 @@ spec:
         logs: /var/log/grafana
         plugins: /var/lib/grafana/plugins
         provisioning: /etc/grafana/provisioning
-      analytics:
+     analytics:
         check_for_updates: false
       log:
         mode: console
@@ -79,6 +79,10 @@ spec:
             url: http://loki:3100
     dashboards:
       default:
+        minio:
+          gnetId: 13502
+          revision: 13
+          datasource: Prometheus
         longhorn:
           gnetId: 13032
           revision: 6
