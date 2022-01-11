@@ -16,18 +16,19 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    ingress:
-      enabled: true
-      configureCertmanager: false
-      ingressClassName: "nginx"
-      hosts:
-        - "gitlab.${SECRET_DOMAIN}"
-      tls:
-        - hosts:
-            - "gitlab.${SECRET_DOMAIN}"
-    serviceMonitor:
-      enabled: true
-    edition: ce
+    global: 
+      ingress:
+        enabled: true
+        configureCertmanager: false
+        ingressClassName: "nginx"
+        hosts:
+          - "gitlab.${SECRET_DOMAIN}"
+        tls:
+          - hosts:
+              - "gitlab.${SECRET_DOMAIN}"
+      serviceMonitor:
+        enabled: true
+      edition: ce
     certmanager:
       install: false
-    
+      
