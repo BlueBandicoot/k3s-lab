@@ -18,6 +18,7 @@ spec:
   values:
     ingress:
       enabled: true
+      configureCertmanager: false
       ingressClassName: "nginx"
       hosts:
         - "gitlab.${SECRET_DOMAIN}"
@@ -27,4 +28,6 @@ spec:
     serviceMonitor:
       enabled: true
     edition: ce
+    certmanager:
+      install: false
     
