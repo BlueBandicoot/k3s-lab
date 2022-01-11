@@ -20,9 +20,7 @@ spec:
       enabled: true
       ingressClassName: "nginx"
       hosts:
-        - host: "gitlab.${SECRET_DOMAIN}"
-          paths:
-            - /
+        - "gitlab.${SECRET_DOMAIN}"
       tls:
         - hosts:
             - "gitlab.${SECRET_DOMAIN}"
