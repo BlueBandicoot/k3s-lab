@@ -31,4 +31,6 @@ spec:
       edition: ce
     certmanager:
       install: false
+    certmanager-issuer:
+      email: "noemail@nemail.be"
       
