@@ -23,9 +23,9 @@ spec:
         ingressClassName: "nginx"
         hosts:
           - "gitlab.${SECRET_DOMAIN}"
-        tls:
-          - hosts:
-              - "gitlab.${SECRET_DOMAIN}"
+        #tls:
+        #  - hosts:
+        #      - "gitlab.${SECRET_DOMAIN}"
       serviceMonitor:
         enabled: true
       edition: ce
