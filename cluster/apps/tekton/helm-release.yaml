@@ -12,7 +12,7 @@ spec:
       version: 0.27.2
       sourceRef:
         kind: HelmRepository
-        name: gitlab-charts
+        name: tekton-charts
         namespace: flux-system
       interval: 5m
   values:
