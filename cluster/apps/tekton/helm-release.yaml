@@ -8,7 +8,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: cdf/tekton-pipeline 
+      chart: tekton-pipeline 
       version: 0.27.2
       sourceRef:
         kind: HelmRepository
