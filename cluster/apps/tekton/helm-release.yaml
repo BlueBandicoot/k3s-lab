@@ -34,7 +34,7 @@ spec:
         annotations: {}
       envFromSecret: "tekton-env"
     webhook:
-    deployment:
+      deployment:
         labels: {}
       pod:
         labels: {}
