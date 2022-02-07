@@ -28,3 +28,6 @@ spec:
         kubernetes.io/ingress.class: "nginx"
         external-dns.alpha.kubernetes.io/target: longhorn.${SECRET_DOMAIN}
       host: longhorn.${SECRET_DOMAIN}
+      tls:
+        - hosts:
+            - "longhorn.${SECRET_DOMAIN}"
